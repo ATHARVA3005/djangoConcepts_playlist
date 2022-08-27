@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions</title>
+    <style>
+        body{
+           color: bisque;
+           background: black;
+        }
+    </style>   
+</head>
+<body>
+    
+
+    {% if nm %}
+    <h3>Hello {{nm}}</h3>
+    {% endif %}
+
+    <h2>Example 8.1</h2>
+    {% if nm and st %}
+    <h3>{{st}} seats are available for {{nm}} course</h3>
+    {% endif %}
+
+    <h2>Example 8.2</h2>
+    {% if nm or st %}
+    <h3>{{st}} seats are available for {{nm}} course</h3>
+    {% endif %}
+
+    <h2>Example 8.3</h2>
+    {% if not st %}
+    <h3> seats not available </h3>
+    {% endif %}
+
+    <h2>Example 8.4</h2>
+    {% if nm == 'Django' %}
+    <h3> Hello {{nm}} </h3>
+    {% endif %}
+
+    <h2>Example 8.5</h2>
+    {% if nm == 'Django' and st == 10 %}
+    <h3> Hello {{nm}} You have only {{st}} seats</h3>
+    {% endif %}
+
+    <h2>Example 8.6</h2>
+    {% if not st == 5 %}
+    <h3> Seats not available </h3>
+    {% endif %}
+
+    <h2>Example 8.7</h2>
+    {% if nm|length >= 4 %}
+    <h3> Hello {{nm}} </h3>
+    {% endif %}
+
+    <h2>Example 8.8</h2>
+    {% if nm %}
+    <h3> Hello {{nm}} </h3>
+    {% else %}
+    <h3> No course available </h3>
+    {% endif %}
+
+    <h2>Example 8.9</h2>
+    {% if nm  == 'tjango'%}
+    <h3> Hello {{nm}} </h3>
+    {% else %}
+    <h3> No course available </h3>
+    {% endif %}
+
+    <h2>Starting if elif</h2>
+
+    <h2>Example 9.1</h2>
+    {% if nm %}
+    <h3> Hello {{nm}} </h3>
+    {% elif st %}
+    <h3>Seats {{st}}</h3>
+    {% else %}
+    <h3> No course available </h3>
+    {% endif %}
+
+    
+</body>
+</html>

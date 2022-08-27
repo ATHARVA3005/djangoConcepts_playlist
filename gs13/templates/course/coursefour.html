@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forLoops</title>
+</head>
+<body>
+    <h2>Example 1</h2>
+    {% for name in names %}
+    <h3> {{name|upper}} </h3><br>
+    {% endfor %}
+
+    <h2>Example 2</h2>
+    {% for name in names reversed %}
+    <h3> {{name|upper}} </h3><br>
+    {% endfor %}
+
+    <h2>Example 3</h2>
+    {% for name in names %}
+    <h3> {{name|upper}} </h3><br>
+    {% empty %}
+    <h3> yaha kuch nai aya </h3>
+    {% endfor %}
+
+    <h2>Example 4</h2>
+    {% for name in names %}
+    {{forloop.counter}} {{name}} <br>
+    {% endfor %}
+
+    <h2>Example 4.1</h2>
+    {% for name in names %}
+    {{ forloop.counter0 }} {{name}} <br>
+    {% endfor %}
+
+    <h2>Example 5</h2>
+    {% for name in names %}
+    {{ forloop.first }} {{name}} <br>
+    {% endfor %}
+
+    <h2>Example 5.1</h2>
+    {% for name in names %}
+    {{ forloop.last|upper }} {{name}} <br>
+    {% endfor %}
+
+    <h2>Example 6</h2>
+    {% for name in names %}
+    {{ forloop.revcounter0 }} {{name}} <br>
+    {% endfor %}
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<body>
+    <form action="" method="get">
+        <!-- hardcode-->
+        <div>
+            <label for="id_name">Name:</label>
+            <input type="text" naem="name" required id="id_name">
+        </div><br><hr>
+
+        <!-- variable input using dtl-->
+        <div>
+            <label for="{{form.name.id_form_label}}">Name:</label>
+            {{form.name}}            
+        </div><br><hr>
+
+        <!--variable label tag-->
+        <div>
+            {{form.name.label_tag}}
+            {{form.name}}            
+        </div><br><hr>
+
+        <!--if we want label for nay field-->
+        <div>
+            {{form.name.label}}
+        </div><br><hr>
+
+        <!--to get the initial value of the field-->
+        <div>
+            {{form.name.value}}
+        </div><br><hr>
+
+        <!--to find initial value in the name attribute-->
+        <div>
+            {{form.name.html_name}}
+        </div><br><hr>
+
+        <!--to write help text for particular field-->
+        <div>
+            {{form.name.help_text}}
+        </div><br><hr>
+
+        <!--to get the required value of the field attribute-->
+        <div>
+            {{form.name.field.required}}
+        </div><br><hr>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body>
+    <h3>{{cname}} Fees: {{charge}}</h3>
+    <img src="{% static 'images/love.jpg' %}" alt="Love" />
+    <hr>
+    <form action="">
+        <input type="button" value="Lavde" onclick="disp()" />
+    </form>
+    <script src="{% static 'js/all.js' %}"></script>
+</body>
+</html>

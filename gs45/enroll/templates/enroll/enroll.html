@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="{% static 'enroll/css/enroll.css' %}">
+    <style>
+        .errorlist{
+            
+            color:red;
+            font-size: 10px;
+            margin:0;
+            padding:0;
+        }
+        
+    </style>
+</head>
+<body>
+    <h3>#To Study styling form errors</h3>
+    <form action="" method="POST" novalidate>
+        {% csrf_token %}
+        {{ form.non_fields_errors }}
+        {% for field in form %}
+        <div>
+            {{ field.label_tag }} {{ field }} <span class="errorlist"> <!--{{ field.errors|striptags}} </span> method2-->
+            <!--method3 best approach -->
+            {% for error in field.errors %}
+            <span class="errorlist">{{error}}</span>
+            {% endfor %}
+        </div>
+        {% endfor %}
+        <input type="submit" value="Submit" class="btn">
+    </form>
+</body>
+</html>
